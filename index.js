@@ -8,7 +8,7 @@ import CharList from './CharList'
 import { Paper } from '@material-ui/core'
 
 const characters = [
-  { name: "Iron Man", status: "dead", team: "Avengers", rank: 4, src:"https://drive.google.com/file/d/1zHogW9ZpmcOF6urUw44hBNmff_6v2n1k/view?usp=sharing", fav: false},
+  { name: "Iron Man", status: "dead", team: "Avengers", rank: 4, src:"https://docs.google.com/uc?id=", fav: false},
   { name: "Thanos", status: "dead", team: "Villains", rank: 11, src:"", fav: false},
   { name: "Thor", status: "alive", team: "Avengers", rank: 3, src:"", fav: false},
   { name: "Vision", status: "dead", team: "Avengers", rank: 9, src:"", fav: false},
