@@ -50,7 +50,7 @@ class Character extends Component {
       </ListItemAvatar>
       <ListItemText
         primary={this.props.character.name}
-        secondary={"Rank " + this.props.character.rank}
+        secondary={this.props.character.desc}
       />
       <ListItemSecondaryAction>
         <FormControlLabel

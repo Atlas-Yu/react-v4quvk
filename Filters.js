@@ -12,6 +12,12 @@ const styles = theme => ({
   button: {
     margin: theme.spacing(1),
     minWidth: 100,
+  },
+  sortLabel:{
+    margin: theme.spacing(2,1,1,1)
+  },
+  filterLabel:{
+    margin: theme.spacing(1,1,-1.5,1)
   }
 });
 
@@ -96,8 +102,8 @@ class Filters extends Component {
 
   getSorting = () =>{
     return this.state.order === "desc"
-      ? (a, b) => b.rank - a.rank
-      : (a, b) => a.rank - b.rank;
+      ? (a, b) => a.rank - b.rank
+      : (a, b) => b.rank - a.rank;
   } 
 
   clearFilters = () =>{
@@ -117,9 +123,14 @@ class Filters extends Component {
 
     return (
       <div>
-        <Dropdown status = {this.state.status} team = {this.state.team} updateStatus = {this.updateStatus.bind(this)} updateTeam = {this.updateTeam.bind(this)}/>
-
+        <InputLabel shrink className={classes.sortLabel}>
+          Sort by
+        </InputLabel>
         <Sortby order = {this.state.order} updateOrder = {this.updateOrder.bind(this)}/>
+        <InputLabel shrink className={classes.filterLabel}>
+          Filter by
+        </InputLabel>
+        <Dropdown status = {this.state.status} team = {this.state.team} updateStatus = {this.updateStatus.bind(this)} updateTeam = {this.updateTeam.bind(this)}/>
 
         <Fav updateFavorite = {this.updateFavorite .bind(this)} fav = {this.state.fav}/>
         <Button color="secondary" className={classes.button}
